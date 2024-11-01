@@ -9,3 +9,9 @@ console.log(funny)
 
 let vexing2 = document.getElementById("inspiring-quote");
 vexing2.innerHTML ="<strong>Aspire to inspire before we expire.</strong>"
+
+let h2Element = document.getElementsByTagName("h2")[0];
+
+/* Your solution goes here */
+h2Element.addEventListener('mouseover', "h2Element");
+console.log("Event handled")
