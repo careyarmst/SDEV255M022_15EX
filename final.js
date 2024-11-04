@@ -45,20 +45,24 @@ if (usercelInpt.value.length > 0) {
     if (!isNaN(getfahr)) {
         usercelInpt.value = convertFtoC(getfahr)
     } else {
-        errMsg.innerHTML = "Please enter a valid number"
+        errMsg.innerHTML = userfahrInpt + "is not a number"
     }
 } else {
-    errMsg.innerHTML = "Please enter a valid number"
+    errMsg.innerHTML = usercelInpt + "is not a number"
 }
 
 fahrtemp = parseFloat(userfahrInpt.value)
     
-if (!isNaN(fahrtemp)) {
-   if (fahrtemp < 32.0) {
-       weatherpic.src = "images/cold.png"
-       weatherpic.alt = "Cold"
-        }
-        
+    if (!isNaN(fahrtemp)) {
+        if (fahrtemp < 32.0) {
+            weatherpic.src = "cold.png"
+            weatherpic.alt = "Cold"
+        } else if (fahrtemp >= 32.0 && fahrtemp <= 50.0) { // Correct the logic and condition
+            weatherpic.src = "cool.png"
+            weatherpic.alt = "Cool"
+        } else if (fahrtemp > 50.0) {
+            weatherpic.src = "warm.png"
+            weatherpic.alt = "Warm"
+        } 
     }
-    
 }
