@@ -51,10 +51,12 @@ if (usercelInpt.value.length > 0) {
     errMsg.innerHTML = "Please enter a valid number"
 }
 
-    fahrtemp = parseFloat(userfahrInpt.value)
-    if (!isNaN(fahrtemp)) {
-        if (fahrtemp < 32) {
-            
+fahrtemp = parseFloat(userfahrInpt.value)
+    
+if (!isNaN(fahrtemp)) {
+   if (fahrtemp < 32.0) {
+       weatherpic.src = "images/cold.png"
+       weatherpic.alt = "Cold"
         }
         
     }
